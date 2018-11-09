@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Serilog.Sinks.Exceptionless" Version="3.1.0" />
+    <PackageReference Include="Serilog.Sinks.Literate" Version="3.0.0" />
+    <PackageReference Include="Serilog.Sinks.MongoDB" Version="3.1.0" />
+    <PackageReference Include="Telegram.Bot" Version="13.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UkrTrackingBot.Caching\UkrTrackingBot.Caching.csproj" />
+    <ProjectReference Include="..\UkrTrackingBot.Common\UkrTrackingBot.Common.csproj" />
+  </ItemGroup>
+
+</Project>

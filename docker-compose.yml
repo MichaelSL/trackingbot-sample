@@ -1,0 +1,82 @@
+version: '3.5'
+
+services:
+  ukrtrackingbotapiwrappernovaposhta:
+    image: my.registry/trackingbot/ukrtrackingbotapiwrappernovaposhta:latest
+    build:
+      context: ./UkrTrackingBot.ApiWrapper.NovaPoshta
+      dockerfile: Dockerfile
+  ukrtrackingbotapiwrapperdeliveryauto:
+    image: my.registry/trackingbot/ukrtrackingbotapiwrapperdeliveryauto:latest
+    build:
+      context: ./UkrTrackingBot.ApiWrapper.DeliveryAuto
+      dockerfile: Dockerfile
+  redismaster:
+    image: redis:3
+  redisslave:
+    image: redis:3
+    command: redis-server --slaveof redismaster 6379
+    links:
+      - redismaster
+  sentinel:
+    image: my.registry/trackingbot/sentinel:latest
+    build: redis-sentinel
+    environment:
+      - SENTINEL_DOWN_AFTER=5000
+      - SENTINEL_FAILOVER=5000    
+    links:
+      - redismaster
+      - redisslave
+  ukrtrackingbottelegramconsole:
+    image: my.registry/trackingbot/ukrtrackingbottelegramconsole:latest
+    build:
+      context: ./UkrTrackingBot.Telegram.Console
+      dockerfile: Dockerfile
+    links:
+      - ukrtrackingbotapiwrappernovaposhta
+      - ukrtrackingbotapiwrapperdeliveryauto
+      - redismaster
+    environment:
+      - NP_ADDRESS=http://ukrtrackingbotapiwrappernovaposhta:80
+      - DEL_ADDRESS=http://ukrtrackingbotapiwrapperdeliveryauto:80
+      - REDIS_ADDRESS=redismaster:6379
+  ukrtrackingbottelegramweb:
+    image: my.registry/trackingbot/ukrtrackingbottelegramweb:latest
+    build:
+      context: ./UkrTrackingBot.Telegram.Web
+      dockerfile: Dockerfile
+    links:
+      - ukrtrackingbotapiwrappernovaposhta
+      - ukrtrackingbotapiwrapperdeliveryauto
+      - redismaster
+    environment:
+      - NP_ADDRESS=http://ukrtrackingbotapiwrappernovaposhta:80
+      - DEL_ADDRESS=http://ukrtrackingbotapiwrapperdeliveryauto:80
+      - REDIS_ADDRESS=redismaster:6379
+  ukrtrackingbotidentityserver:
+    image: my.registry/trackingbot/ukrtrackingbotidentityserver:latest
+    build:
+        context: ./UkrTrackingBot.IdentityServer
+        dockerfile: Dockerfile
+  ukrtrackingbotweb:
+    image: my.registry/trackingbot/ukrtrackingbotweb:latest
+    build:
+        context: ./UkrTrackingBot.Web
+        dockerfile: Dockerfile
+  nginxproxy:
+    image: my.registry/trackingbot/nginxproxy:latest
+    build:
+      context:  ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - type: volume
+        source: nginx_etc
+        target: /etc/letsencrypt
+        volume:
+          nocopy: true
+
+volumes:
+  nginx_etc:

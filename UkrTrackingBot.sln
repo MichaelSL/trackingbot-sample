@@ -1,0 +1,115 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27102.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.ApiWrapper.NovaPoshta", "UkrTrackingBot.ApiWrapper.NovaPoshta\UkrTrackingBot.ApiWrapper.NovaPoshta.csproj", "{488911FD-C85F-4865-876E-51C4C8F0DD4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.ApiWrapper.NovaPoshta.Domain", "UkrTrackingBot.ApiWrapper.NovaPoshta.Domain\UkrTrackingBot.ApiWrapper.NovaPoshta.Domain.csproj", "{3A1A08A4-046C-47C7-A228-A89F5BD66FD0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.Telegram.Console", "UkrTrackingBot.Telegram.Console\UkrTrackingBot.Telegram.Console.csproj", "{A2BDCB5A-90F9-4630-883C-606C71A8FCDB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.ApiWrapper.DeliveryAuto", "UkrTrackingBot.ApiWrapper.DeliveryAuto\UkrTrackingBot.ApiWrapper.DeliveryAuto.csproj", "{374EB137-9CEB-4E5E-B3AE-505BD435F3AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.ApiWrapper.DeliveryAuto.Domain", "UkrTrackingBot.ApiWrapper.DeliveryAuto.Domain\UkrTrackingBot.ApiWrapper.DeliveryAuto.Domain.csproj", "{03729E76-17F1-4748-9B30-20B12AA9E8A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.Caching", "UkrTrackingBot.Caching\UkrTrackingBot.Caching.csproj", "{4A6C9F58-D104-414D-9B04-30647C26F0CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{65DC1002-3B96-47AA-A1E9-6C99F6156415}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.Caching.IntegrationTests", "tests\UkrTrackingBot.Caching.IntegrationTests\UkrTrackingBot.Caching.IntegrationTests.csproj", "{1FC60FDF-9FD8-45BF-AE36-37749EF73156}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.IdentityServer", "UkrTrackingBot.IdentityServer\UkrTrackingBot.IdentityServer.csproj", "{0C691860-4163-404D-8CB7-3B3ACDC2D77B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.Web", "UkrTrackingBot.Web\UkrTrackingBot.Web.csproj", "{4D234DFD-F52B-43CC-9119-86B4DD11A1F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.Common", "UkrTrackingBot.Common\UkrTrackingBot.Common.csproj", "{72FAA128-E1D7-43A9-9450-C5D51ED3CFDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.Common.UnitTests", "tests\UkrTrackingBot.Common.UnitTests\UkrTrackingBot.Common.UnitTests.csproj", "{0E606A06-041A-49E6-AF45-02FF5CF4F3CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.Telegram.Web", "UkrTrackingBot.Telegram.Web\UkrTrackingBot.Telegram.Web.csproj", "{5C72EBFD-5E1D-4D0F-896A-7F446E0D7259}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.Bot.Common", "UkrTrackingBot.Telegram.Common\UkrTrackingBot.Bot.Common.csproj", "{358D435E-18B6-4C05-AE9F-E68D6748B4B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA2E8CF8-9B5A-421B-842B-B78B3E8D6BBE}"
+	ProjectSection(SolutionItems) = preProject
+		build.cake = build.cake
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UkrTrackingBot.Bot.Common.UnitTests", "tests\UkrTrackingBot.Bot.Common.UnitTests\UkrTrackingBot.Bot.Common.UnitTests.csproj", "{D8BFE428-11F4-4718-A4E5-11E2457B2AEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{488911FD-C85F-4865-876E-51C4C8F0DD4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{488911FD-C85F-4865-876E-51C4C8F0DD4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{488911FD-C85F-4865-876E-51C4C8F0DD4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{488911FD-C85F-4865-876E-51C4C8F0DD4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A1A08A4-046C-47C7-A228-A89F5BD66FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A1A08A4-046C-47C7-A228-A89F5BD66FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A1A08A4-046C-47C7-A228-A89F5BD66FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A1A08A4-046C-47C7-A228-A89F5BD66FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2BDCB5A-90F9-4630-883C-606C71A8FCDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2BDCB5A-90F9-4630-883C-606C71A8FCDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2BDCB5A-90F9-4630-883C-606C71A8FCDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2BDCB5A-90F9-4630-883C-606C71A8FCDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{374EB137-9CEB-4E5E-B3AE-505BD435F3AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{374EB137-9CEB-4E5E-B3AE-505BD435F3AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{374EB137-9CEB-4E5E-B3AE-505BD435F3AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{374EB137-9CEB-4E5E-B3AE-505BD435F3AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03729E76-17F1-4748-9B30-20B12AA9E8A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03729E76-17F1-4748-9B30-20B12AA9E8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03729E76-17F1-4748-9B30-20B12AA9E8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03729E76-17F1-4748-9B30-20B12AA9E8A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A6C9F58-D104-414D-9B04-30647C26F0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A6C9F58-D104-414D-9B04-30647C26F0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A6C9F58-D104-414D-9B04-30647C26F0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A6C9F58-D104-414D-9B04-30647C26F0CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FC60FDF-9FD8-45BF-AE36-37749EF73156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC60FDF-9FD8-45BF-AE36-37749EF73156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC60FDF-9FD8-45BF-AE36-37749EF73156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC60FDF-9FD8-45BF-AE36-37749EF73156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C691860-4163-404D-8CB7-3B3ACDC2D77B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C691860-4163-404D-8CB7-3B3ACDC2D77B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C691860-4163-404D-8CB7-3B3ACDC2D77B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C691860-4163-404D-8CB7-3B3ACDC2D77B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D234DFD-F52B-43CC-9119-86B4DD11A1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D234DFD-F52B-43CC-9119-86B4DD11A1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D234DFD-F52B-43CC-9119-86B4DD11A1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D234DFD-F52B-43CC-9119-86B4DD11A1F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72FAA128-E1D7-43A9-9450-C5D51ED3CFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72FAA128-E1D7-43A9-9450-C5D51ED3CFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72FAA128-E1D7-43A9-9450-C5D51ED3CFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72FAA128-E1D7-43A9-9450-C5D51ED3CFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E606A06-041A-49E6-AF45-02FF5CF4F3CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E606A06-041A-49E6-AF45-02FF5CF4F3CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E606A06-041A-49E6-AF45-02FF5CF4F3CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E606A06-041A-49E6-AF45-02FF5CF4F3CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C72EBFD-5E1D-4D0F-896A-7F446E0D7259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C72EBFD-5E1D-4D0F-896A-7F446E0D7259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C72EBFD-5E1D-4D0F-896A-7F446E0D7259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C72EBFD-5E1D-4D0F-896A-7F446E0D7259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{358D435E-18B6-4C05-AE9F-E68D6748B4B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358D435E-18B6-4C05-AE9F-E68D6748B4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358D435E-18B6-4C05-AE9F-E68D6748B4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358D435E-18B6-4C05-AE9F-E68D6748B4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8BFE428-11F4-4718-A4E5-11E2457B2AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BFE428-11F4-4718-A4E5-11E2457B2AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8BFE428-11F4-4718-A4E5-11E2457B2AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8BFE428-11F4-4718-A4E5-11E2457B2AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1FC60FDF-9FD8-45BF-AE36-37749EF73156} = {65DC1002-3B96-47AA-A1E9-6C99F6156415}
+		{0E606A06-041A-49E6-AF45-02FF5CF4F3CD} = {65DC1002-3B96-47AA-A1E9-6C99F6156415}
+		{D8BFE428-11F4-4718-A4E5-11E2457B2AEB} = {65DC1002-3B96-47AA-A1E9-6C99F6156415}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {207C4EE3-5D09-42C3-9AE1-683143959D05}
+	EndGlobalSection
+EndGlobal
