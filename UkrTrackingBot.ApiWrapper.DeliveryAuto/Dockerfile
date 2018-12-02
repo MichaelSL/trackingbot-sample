@@ -4,6 +4,7 @@ ENV ASPNETCORE_ENVIRONMENT Development
 ENV MongoDbLogging:MongoDb database
 ENV MongoDbLogging:MongoPassword dbpassword
 ENV MongoDbLogging:MongoDbAddress dbaddress
+ENV API_KEY delapikey
 WORKDIR .
 EXPOSE 80
 COPY ./bin/Docker/publish .

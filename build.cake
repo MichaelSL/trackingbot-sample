@@ -168,6 +168,6 @@ Task("DockerPush")
 });
 
 Task("Default")
-    .IsDependentOn("DockerPush");
+    .IsDependentOn("DockerComposeBuild");   //use "DockerPush" if use want to push to your Docker repo
 
 RunTarget(target);

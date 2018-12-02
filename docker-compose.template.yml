@@ -6,11 +6,23 @@ services:
     build:
       context: ./UkrTrackingBot.ApiWrapper.NovaPoshta
       dockerfile: Dockerfile
+    environment:
+      - Exceptionless:ApiKey=exceptionlessapikey
+      - MongoDbLogging:MongoDb=database
+      - MongoDbLogging:MongoPassword=databasepassword
+      - MongoDbLogging:MongoDbAddress=dbaddress
+      - API_KEY novaposhtaapikey
   ukrtrackingbotapiwrapperdeliveryauto:
     image: my.registry/trackingbot/ukrtrackingbotapiwrapperdeliveryauto{tag}
     build:
       context: ./UkrTrackingBot.ApiWrapper.DeliveryAuto
       dockerfile: Dockerfile
+    environment:
+      - Exceptionless:ApiKey=exceptionlessapikey
+      - MongoDbLogging:MongoDb=database
+      - MongoDbLogging:MongoPassword=databasepassword
+      - MongoDbLogging:MongoDbAddress=dbaddress
+      - API_KEY deliveryapikey
   redismaster:
     image: redis:3
   redisslave:
@@ -40,6 +52,11 @@ services:
       - NP_ADDRESS=http://ukrtrackingbotapiwrappernovaposhta:80
       - DEL_ADDRESS=http://ukrtrackingbotapiwrapperdeliveryauto:80
       - REDIS_ADDRESS=redismaster:6379
+      - BOT_TOKEN=token
+      - Exceptionless:ApiKey=exceptionlessapikey
+      - MongoDbLogging:MongoDb=database
+      - MongoDbLogging:MongoPassword=databasepassword
+      - MongoDbLogging:MongoDbAddress=dbaddress
   ukrtrackingbottelegramweb:
     image: my.registry/trackingbot/ukrtrackingbottelegramweb{tag}
     build:
@@ -53,16 +70,35 @@ services:
       - NP_ADDRESS=http://ukrtrackingbotapiwrappernovaposhta:80
       - DEL_ADDRESS=http://ukrtrackingbotapiwrapperdeliveryauto:80
       - REDIS_ADDRESS=redismaster:6379
+      - BOT_TOKEN=token
+      - Exceptionless:ApiKey=exceptionlessapikey
+      - MongoDbLogging:MongoDb=database
+      - MongoDbLogging:MongoPassword=databasepassword
+      - MongoDbLogging:MongoDbAddress=dbaddress
   ukrtrackingbotidentityserver:
     image: my.registry/trackingbot/ukrtrackingbotidentityserver{tag}
     build:
-        context: ./UkrTrackingBot.IdentityServer
-        dockerfile: Dockerfile
+      context: ./UkrTrackingBot.IdentityServer
+      dockerfile: Dockerfile
+    environment:
+      - Exceptionless:ApiKey=exceptionlessapikey
+      - MongoDbLogging:MongoDb=database
+      - MongoDbLogging:MongoPassword=databasepassword
+      - MongoDbLogging:MongoDbAddress=dbaddress
+      - MVC_REDIRECT_URI=redirectUri
+      - MVC_POST_LOGOUT_REDIRECT_URI=logoutRedirectUri
+      - SIGN_CERT_PASSWORD=pwd
   ukrtrackingbotweb:
     image: my.registry/trackingbot/ukrtrackingbotweb{tag}
     build:
-        context: ./UkrTrackingBot.Web
-        dockerfile: Dockerfile
+      context: ./UkrTrackingBot.Web
+      dockerfile: Dockerfile
+    environment:
+      - Exceptionless:ApiKey=exceptionlessapikey
+      - MongoDbLogging:MongoDb=database
+      - MongoDbLogging:MongoPassword=databasepassword
+      - MongoDbLogging:MongoDbAddress=dbaddress
+      - IDENTITYSERVER_AUTHORITYURL=authorityUrl
   nginxproxy:
     image: my.registry/trackingbot/nginxproxy{tag}
     build:
